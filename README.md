@@ -8,6 +8,9 @@ A Proof of Concept, VSCode on the iPad built with Flutter.
 * This uses native code syntax highlighting and no webviews or javascript.
 * This will target Flutter.io first.
 * Light mode and Dark Mode supported
+* In the example it uses real code that is apart of the app to display
+
+`lib/utils/example_code.dart`
 
 ## Help Needed
 
