@@ -8,7 +8,35 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      // color: Colors.green,
+      child: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(),
+            Row(
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.merge_type, size: 18.0),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.sync, size: 18.0),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.desktop_windows, size: 18.0),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.clear, size: 18.0),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -25,7 +25,7 @@ class MenuButtons extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.device_hub),
+                icon: Icon(Icons.merge_type),
                 onPressed: () {},
               ),
               IconButton(
