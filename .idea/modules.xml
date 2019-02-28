@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/vscode_ipad.iml" filepath="$PROJECT_DIR$/vscode_ipad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/vscode_ipad_android.iml" filepath="$PROJECT_DIR$/android/vscode_ipad_android.iml" />
+    </modules>
+  </component>
+</project>
