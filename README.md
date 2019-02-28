@@ -12,6 +12,9 @@ A Proof of Concept, VSCode on the iPad built with Flutter.
 
 `lib/utils/example_code.dart`
 
+* Parser, Highlighter and Example Code was taken from the Flutter Gallery app.
+https://github.com/flutter/flutter/tree/master/examples/flutter_gallery
+
 ## Help Needed
 
 * I am a one man team and will need all the help and Pull Requests that I can get, I built the project to be easy to contribute, each of th windows is broken up into their own file.
