@@ -44,7 +44,7 @@ class TabletDesktopLayout extends StatelessWidget {
                       child: WorkArea(),
                     ),
                     Flexible(
-                      flex: 4,
+                      flex: 5,
                       child: BottomWindow(),
                     ),
                   ],
