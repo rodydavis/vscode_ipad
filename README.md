@@ -17,7 +17,7 @@ https://github.com/flutter/flutter/tree/master/examples/flutter_gallery
 
 ## Help Needed
 
-* I am a one man team and will need all the help and Pull Requests that I can get, I built the project to be easy to contribute, each of the windows has their own file.
+* I am a one man team and will need all the help and Pull Requests that I can get, I built the project to be easy to contribute, each of the windows have their own file.
 
 ## Screenshots (iPad Pro 12.9)
 
