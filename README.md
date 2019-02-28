@@ -1,16 +1,24 @@
 # vscode_ipad
 
-A Proof of Concept, VSCode on the iPad.
+A Proof of Concept, VSCode on the iPad built with Flutter.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+* The goal of this project is to build a truely native IDE for Tablets.
+* This uses native code syntax highlighting and no webviews or javascript.
+* This will target Flutter.io first.
+* Light mode and Dark Mode supported
+* In the example it uses real code that is apart of the app to display
 
-A few resources to get you started if this is your first Flutter project:
+`lib/utils/example_code.dart`
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+* Parser, Highlighter and Example Code was taken from the Flutter Gallery app.
+https://github.com/flutter/flutter/tree/master/examples/flutter_gallery
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Help Needed
+
+* I am a one man team and will need all the help and Pull Requests that I can get, I built the project to be easy to contribute, each of the windows have their own file.
+
+## Screenshots (iPad Pro 12.9)
+
+![](https://github.com/AppleEducate/vscode_ipad/blob/master/screenshots/1.PNG)
