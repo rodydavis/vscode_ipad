@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vscode_ipad/ui/home/screen.dart';
+
+import 'ui/home/screen.dart';
 
 void main() => runApp(MyApp());
 

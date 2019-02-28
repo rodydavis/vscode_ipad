@@ -25,6 +25,7 @@ class SideWindow extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     ExpansionTile(
+                      initiallyExpanded: true,
                       title: Text("Open Editors"),
                       children: <Widget>[
                         ListTile(
@@ -54,6 +55,7 @@ class SideWindow extends StatelessWidget {
                       ],
                     ),
                     ExpansionTile(
+                      initiallyExpanded: true,
                       title: Text("Project Name"),
                       children: <Widget>[
                         Container(
