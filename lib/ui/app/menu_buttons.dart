@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MenuButtons extends StatelessWidget {
   const MenuButtons({
@@ -7,8 +8,35 @@ class MenuButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.content_copy),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.device_hub),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.bug),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.plug),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.timer),
+            onPressed: () {},
+          ),
+        ],
+      ),
     );
   }
 }
