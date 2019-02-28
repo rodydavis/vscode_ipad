@@ -1,6 +1,6 @@
 # vscode_ipad
 
-A Proof of COncept, VSCode on the iPad.
+A Proof of Concept, VSCode on the iPad.
 
 ## Getting Started
 
