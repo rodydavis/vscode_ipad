@@ -18,7 +18,7 @@ class TabletDesktopLayout extends StatelessWidget {
       direction: Axis.vertical,
       children: <Widget>[
         Flexible(
-          flex: 30,
+          flex: 20,
           child: Flex(
             direction: Axis.horizontal,
             children: <Widget>[
