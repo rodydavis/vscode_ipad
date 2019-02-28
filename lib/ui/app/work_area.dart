@@ -39,30 +39,47 @@ class _WorkAreaState extends State<WorkArea> {
             ? SyntaxHighlighterStyle.darkThemeStyle()
             : SyntaxHighlighterStyle.lightThemeStyle();
 
-    Widget body;
     if (_exampleCode == null) {
-      body = const Center(child: CircularProgressIndicator());
-    } else {
-      body = SingleChildScrollView(
-          child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: RichText(
-                  text: TextSpan(
-                      style: const TextStyle(
-                          fontFamily: 'monospace', fontSize: 10.0),
-                      children: <TextSpan>[
-                    DartSyntaxHighlighter(style).format(_exampleCode)
-                  ]))));
+      return const Center(child: CircularProgressIndicator());
     }
+    // else {
+    //   body = SingleChildScrollView(
+    //     child: Padding(
+    //       padding: const EdgeInsets.all(16.0),
+    //       child: RichText(
+    //         text: TextSpan(
+    //           style: const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
+    //           children: <TextSpan>[
+    //             DartSyntaxHighlighter(style).format(_exampleCode)
+    //           ],
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // }
 
     return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          body,
-        ],
-      ),
-    );
+        child: Column(
+      children: <Widget>[
+        Row(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: RichText(
+                textAlign: TextAlign.start,
+                text: TextSpan(
+                  style:
+                      const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
+                  children: <TextSpan>[
+                    DartSyntaxHighlighter(style).format(_exampleCode)
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Container(height: MediaQuery.of(context).size.height),
+      ],
+    ));
   }
 }

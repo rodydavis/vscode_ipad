@@ -8,7 +8,9 @@ class StatusBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple,
+      color: Theme.of(context).brightness == Brightness.light
+          ? Colors.purple[100]
+          : Colors.purple,
       child: SafeArea(
         top: false,
         child: Row(
