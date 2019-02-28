@@ -15,39 +15,47 @@ class TabletDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flex(
-      direction: Axis.horizontal,
+      direction: Axis.vertical,
       children: <Widget>[
         Flexible(
-          flex: 1,
-          child: MenuButtons(),
-        ),
-        Flexible(
-          flex: 5,
-          child: SideWindow(),
-        ),
-        Flexible(
-          flex: 20,
+          flex: 30,
           child: Flex(
-            direction: Axis.vertical,
+            direction: Axis.horizontal,
             children: <Widget>[
               Flexible(
                 flex: 1,
-                child: TopBar(),
+                child: MenuButtons(),
+              ),
+              Flexible(
+                flex: 5,
+                child: SideWindow(),
               ),
               Flexible(
                 flex: 20,
-                child: WorkArea(),
-              ),
-              Flexible(
-                flex: 4,
-                child: BottomWindow(),
-              ),
-              Flexible(
-                flex: 1,
-                child: StatusBar(),
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: <Widget>[
+                    Flexible(
+                      flex: 1,
+                      child: TopBar(),
+                    ),
+                    Flexible(
+                      flex: 20,
+                      child: WorkArea(),
+                    ),
+                    Flexible(
+                      flex: 4,
+                      child: BottomWindow(),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
+        ),
+        Flexible(
+          flex: 1,
+          child: StatusBar(),
         ),
       ],
     );

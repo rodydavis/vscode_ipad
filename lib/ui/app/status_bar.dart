@@ -9,6 +9,9 @@ class StatusBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.purple,
+      // child: Row(
+      //   children: <Widget>[],
+      // ),
     );
   }
 }

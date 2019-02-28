@@ -10,29 +10,40 @@ class MenuButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          IconButton(
-            icon: Icon(Icons.content_copy),
-            onPressed: () {},
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.content_copy),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.device_hub),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(FontAwesomeIcons.bug),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(FontAwesomeIcons.plug),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.timer),
+                onPressed: () {},
+              ),
+            ],
           ),
           IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.device_hub),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.bug),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.plug),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.timer),
+            icon: Icon(Icons.settings),
             onPressed: () {},
           ),
         ],
