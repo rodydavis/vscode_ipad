@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_ide/utils/index.dart';
 
-import '../../utils/highlighter.dart';
-import '../../utils/parser.dart';
+import '../../utils/code/index.dart';
 
 class WorkArea extends StatefulWidget {
   const WorkArea({
@@ -13,73 +13,42 @@ class WorkArea extends StatefulWidget {
 }
 
 class _WorkAreaState extends State<WorkArea> {
-  String _exampleCode;
-
   @override
-  void didChangeDependencies() {
+  void initState() {
     try {
       getExampleCode('buttons_raised', DefaultAssetBundle.of(context))
           .then<void>((String code) {
         if (mounted) {
           setState(() {
-            _exampleCode = code ?? 'Example code not found';
+            _controller.text = code ?? 'Example code not found';
           });
         }
       });
     } catch (e) {
       print("Error laoding assets $e");
     }
-    super.didChangeDependencies();
+    super.initState();
   }
+
+  final _controller = TextEditingController();
+  final _focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
-    final SyntaxHighlighterStyle style =
-        Theme.of(context).brightness == Brightness.dark
-            ? SyntaxHighlighterStyle.darkThemeStyle()
-            : SyntaxHighlighterStyle.lightThemeStyle();
-
-    if (_exampleCode == null) {
+    if (_controller.text == null) {
       return const Center(child: CircularProgressIndicator());
     }
-    // else {
-    //   body = SingleChildScrollView(
-    //     child: Padding(
-    //       padding: const EdgeInsets.all(16.0),
-    //       child: RichText(
-    //         text: TextSpan(
-    //           style: const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
-    //           children: <TextSpan>[
-    //             DartSyntaxHighlighter(style).format(_exampleCode)
-    //           ],
-    //         ),
-    //       ),
-    //     ),
-    //   );
-    // }
-
     return Container(
-        child: Column(
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: RichText(
-                textAlign: TextAlign.start,
-                text: TextSpan(
-                  style:
-                      const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
-                  children: <TextSpan>[
-                    DartSyntaxHighlighter(style).format(_exampleCode)
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Container(height: MediaQuery.of(context).size.height),
-      ],
-    ));
+      padding: const EdgeInsets.all(16.0),
+      child: CustomEditableText(
+        maxLines: null,
+        controller: _controller,
+        backgroundCursorColor: Colors.grey,
+        style: TextStyle(color: Colors.black),
+        focusNode: _focusNode,
+        cursorColor: Colors.blueAccent,
+        dartCode: true,
+      ),
+    );
   }
 }
